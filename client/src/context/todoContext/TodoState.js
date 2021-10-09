@@ -6,27 +6,27 @@ const TodoState = ({ children }) => {
 	const initialState = {
 		tasks: [
 			{
-				task: 'Finish todo app',
+				title: 'Finish todo app',
 				priority: 7,
 				created: 'Fri Oct 08 2021',
 			},
 			{
-				task: 'Finish todo app',
+				title: 'Finish todo app',
 				priority: 7,
 				created: 'Fri Oct 08 2021',
 			},
 			{
-				task: 'Finish todo app',
+				title: 'Finish todo app',
 				priority: 7,
 				created: 'Fri Oct 08 2021',
 			},
 			{
-				task: 'Finish todo app',
+				title: 'Finish todo app',
 				priority: 7,
 				created: 'Fri Oct 08 2021',
 			},
 			{
-				task: 'Finish todo app',
+				title: 'Finish todo app',
 				priority: 7,
 				created: 'Fri Oct 08 2021',
 			},
