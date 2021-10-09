@@ -1,36 +1,12 @@
 import React from 'react';
-
+import SingleToDo from './SingleToDo';
+import { useTodos } from '../../context/todoContext/todoContext';
 const ToDoList = () => {
-	const todos = [
-		{
-			task: 'Finish todo app',
-			priority: 7,
-			created: 'Fri Oct 08 2021',
-		},
-		{
-			task: 'Finish todo app',
-			priority: 7,
-			created: 'Fri Oct 08 2021',
-		},
-		{
-			task: 'Finish todo app',
-			priority: 7,
-			created: 'Fri Oct 08 2021',
-		},
-		{
-			task: 'Finish todo app',
-			priority: 7,
-			created: 'Fri Oct 08 2021',
-		},
-	];
+	const { tasks } = useTodos()
 	return (
-		<div className='row row-cols-1 g-3 text-center px-2'>
-			{todos.map((task) => (
-				<div className='col todoCol rounded rounded-3 p-2'>
-					<p>Task : {task.task}</p>
-					<p>Priority : {task.priority}</p>
-					<p>Created : {String(task.created)}</p>
-				</div>
+		<div className='row row-cols-1 g-3 text-center p-2 todoRow'>
+			{tasks.map((task) => (
+				<SingleToDo task={task} />
 			))}
 		</div>
 	);
