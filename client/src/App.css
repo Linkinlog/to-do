@@ -1,14 +1,33 @@
-body{
+body {
 	overflow: hidden !important;
-	background-color: #BDB2FF;
+	background-color: #bdb2ff;
+}
+
+.shadow1 {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .todoCol {
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	background-color: #A0C4FF;
+	background-color: #a0c4ff;
 }
 
 .todoRow {
 	max-height: 88vh;
 	overflow-y: scroll;
+}
+
+.item-enter {
+	opacity: 0;
+}
+.item-enter-active {
+	opacity: 1;
+	transition: opacity 1000ms ease-in;
+}
+.item-exit {
+	opacity: 1;
+}
+.item-exit-active {
+	opacity: 0;
+	transition: opacity 1000ms ease-in;
 }
