@@ -41,36 +41,36 @@ const Navb = () => {
 						</Link>
 					)}
 				</div>
-				<div className='offcanvas-body'>
-					<div className='dropdown mb-3'>
-						<button className='btn shadow1 dropdown-toggle' type='button' id='dropdownMenuButton' data-bs-toggle='dropdown'>
-							Task Group
-						</button>
-						<ul className='dropdown-menu' aria-labelledby='dropdownMenuButton'>
-							<li>
-								<button className='btn dropdown-item' onClick={() => changeGroup('personal')} data-bs-dismiss='offcanvas'>
-									Personal
-								</button>
-							</li>
-							<li>
-								<button className='btn dropdown-item' onClick={() => changeGroup('professional')} data-bs-dismiss='offcanvas'>
-									Professional
-								</button>
-							</li>
-							<li>
-								<button className='btn dropdown-item' onClick={() => changeGroup()} data-bs-dismiss='offcanvas'>
-									Clear
-								</button>
-							</li>
-						</ul>
-					</div>
-					{isAuthenticated && (
+				{isAuthenticated && (
+					<div className='offcanvas-body'>
+						<div className='dropdown mb-3'>
+							<button className='btn shadow1 dropdown-toggle' type='button' id='dropdownMenuButton' data-bs-toggle='dropdown'>
+								Task Group
+							</button>
+							<ul className='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+								<li>
+									<button className='btn dropdown-item' onClick={() => changeGroup('personal')} data-bs-dismiss='offcanvas'>
+										Personal
+									</button>
+								</li>
+								<li>
+									<button className='btn dropdown-item' onClick={() => changeGroup('professional')} data-bs-dismiss='offcanvas'>
+										Professional
+									</button>
+								</li>
+								<li>
+									<button className='btn dropdown-item' onClick={() => changeGroup()} data-bs-dismiss='offcanvas'>
+										Clear
+									</button>
+								</li>
+							</ul>
+						</div>
 						<div>
 							<AddToDo />
-							<p className='d-flex justify-content-end text-muted mt-3 pe-3'>Logged in as { user.email }</p>
+							<p className='d-flex justify-content-end text-muted mt-3 pe-3'>Logged in as {user.email}</p>
 						</div>
-					)}
-				</div>
+					</div>
+				)}
 			</div>
 		</>
 	);
