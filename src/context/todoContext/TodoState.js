@@ -9,7 +9,7 @@ const TodoState = ({ children }) => {
 		tasks: [
 			{
 				id: 1,
-				title: 'Default task',
+				title: 'Add to Todo list by signing up',
 				priority: 10,
 				category: 'personal',
 				created: 'Fri Oct 08 2021',
