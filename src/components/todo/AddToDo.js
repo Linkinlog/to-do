@@ -79,7 +79,7 @@ const AddToDo = () => {
 				<div className='invalid-feedback'>Please provide a valid category.</div>
 			</div>
 			<div className='col-12'>
-				<button className='btn shadow1' type='submit'>
+				<button className='btn shadow1' data-bs-dismiss='offcanvas' type='submit'>
 					➕ Add Task
 				</button>
 			</div>
