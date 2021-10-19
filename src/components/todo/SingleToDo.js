@@ -72,21 +72,27 @@ const SingleToDo = ({ task }) => {
 			</Modal>
 			<Col className='todoCol rounded rounded-3 my-4 p-2'>
 				<Container>
+					<Row className='text-muted'>
+					<Col xs={{ span: 2, offset: 3 }} xl={{ span: 2, offset:3 }}>
+							Title
+						</Col>
+						<Col xs={{ span: 2 }} xl={{ span: 2, offset: 1 }}>
+							Priority
+						</Col>
+						<Col xs={{ span: 2 }}>
+							<span className='ps-3'>Created</span>
+						</Col>
+					</Row>
 					<Row className='text-wrap lh-lg d-flex align-items-center'>
-						<Col xs={1}>
+						<Col xs={2}>
 							<Button variant='outline' onClick={handleShow}>
 								🛠
 							</Button>
 						</Col>
-						<Col xs={6}>{task.title}</Col>
+						<Col xs={4}>{task.title}</Col>
+						<Col xs={2}>{task.priority}</Col>
+						<Col xs={2}>{task.created}</Col>
 						<Col xs={2}>
-							<span className='text-muted'>Priority :</span> {task.priority}
-						</Col>
-						<Col xs={2}>
-							<span className='text-muted'>Created : </span>
-							{task.created}
-						</Col>
-						<Col xs={1}>
 							<Link to='/'>
 								<Button variant='outline' onClick={complete}>
 									☠
